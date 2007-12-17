@@ -10,7 +10,6 @@ URL:            http://search.cpan.org/dist/%{module}/
 Source0:        http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:  libdnet-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 perl-Net-Libdnet provides perl bindings to the dnet library
