@@ -3,7 +3,7 @@
 Summary:        Perl interface to libdnet
 Name:		perl-%{module}
 Version:        0.01
-Release:        %mkrel 3
+Release:        %mkrel 5
 License:        BSD
 Group:		Development/Perl
 URL:            http://search.cpan.org/dist/%{module}/
