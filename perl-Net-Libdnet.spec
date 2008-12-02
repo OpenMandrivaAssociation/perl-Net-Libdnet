@@ -2,15 +2,15 @@
 
 Summary:        Perl interface to libdnet
 Name:		perl-%{module}
-Version:        0.01
-Release:        %mkrel 6
+Version:        0.90
+Release:        %mkrel 1
 License:        BSD
 Group:		Development/Perl
-URL:            http://search.cpan.org/dist/%{module}/
-Source0:        http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:  libdnet-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 perl-Net-Libdnet provides perl bindings to the dnet library
@@ -40,6 +40,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc Changes LICENSE README
+%{_bindir}/*
 %{perl_vendorarch}/auto/*
 %{perl_vendorarch}/Net
 %{_mandir}/man?/*
