@@ -2,7 +2,7 @@
 
 Summary:        Perl interface to libdnet
 Name:		perl-%{module}
-Version:        0.90
+Version:        0.91
 Release:        %mkrel 1
 License:        BSD
 Group:		Development/Perl
