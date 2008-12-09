@@ -10,6 +10,7 @@ Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:  libdnet-devel
+BuildRequires:  perl(Class::Gomor::Array)
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
