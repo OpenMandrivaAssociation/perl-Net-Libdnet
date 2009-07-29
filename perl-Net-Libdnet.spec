@@ -1,30 +1,30 @@
-%define module Net-Libdnet
+%define upstream_name    Net-Libdnet
+%define upstream_version 0.92
 
-Summary:        Perl interface to libdnet
-Name:		perl-%{module}
-Version:        0.92
-Release:        %mkrel 1
-License:        BSD
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl interface to libdnet
+License:    BSD
 Group:		Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
-BuildRequires:	perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  libdnet-devel
 BuildRequires:  perl(Class::Gomor::Array)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 perl-Net-Libdnet provides perl bindings to the dnet library
 
 %prep
-
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %serverbuild
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="$CFLAGS" LIBS="-L%{_libdir} -ldnet" INC="-I%{_includedir}"
-
 %make LD_RUN_PATH=""
 
 %check
@@ -32,7 +32,6 @@ make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean
