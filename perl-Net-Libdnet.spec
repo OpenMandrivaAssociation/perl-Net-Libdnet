@@ -1,5 +1,5 @@
 %define upstream_name    Net-Libdnet
-%define upstream_version 0.94
+%define upstream_version 0.95
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,7 +10,7 @@ License:    BSD
 Group:		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
-
+Patch0:     Net-Libdnet-0.95-fix-header.patch
 BuildRequires:  libdnet-devel
 BuildRequires:  perl(Class::Gomor::Array)
 BuildRequires:	perl-devel
@@ -21,6 +21,7 @@ perl-Net-Libdnet provides perl bindings to the dnet library
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -p 1
 
 %build
 %serverbuild
