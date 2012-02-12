@@ -23,7 +23,7 @@ perl-Net-Libdnet provides perl bindings to the dnet library
 
 %build
 %serverbuild
-%{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="$CFLAGS" LIBS="-L%{_libdir} -ldnet" INC="-I%{_includedir}"
+%{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="$CFLAGS -fno-PIE" LIBS="-L%{_libdir} -ldnet" INC="-I%{_includedir}"
 %make LD_RUN_PATH=""
 
 %check
