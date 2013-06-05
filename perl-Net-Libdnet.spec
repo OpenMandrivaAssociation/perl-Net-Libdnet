@@ -2,14 +2,14 @@
 %define upstream_version 0.96
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Version:    %perl_convert_version 0.98
+Release:	1
 
 Summary:    Perl interface to libdnet
 License:    BSD
 Group:		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Net/Net-Libdnet-0.98.tar.gz
 BuildRequires:  libdnet-devel
 BuildRequires:  perl(Class::Gomor::Array)
 BuildRequires:	perl-devel
@@ -104,3 +104,4 @@ rm -rf %{buildroot}
 
 * Fri Jul 20 2007 Oden Eriksson <oeriksson@mandriva.com> 0.01-1mdv2008.0
 - initial Mandriva package
+
