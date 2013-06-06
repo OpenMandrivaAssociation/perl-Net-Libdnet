@@ -1,6 +1,5 @@
 %define upstream_name    Net-Libdnet
-%define upstream_version 0.96
-
+%define upstream_version 0.98
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version 0.98
 Release:	1
