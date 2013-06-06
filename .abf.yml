@@ -1,2 +1,4 @@
+removed_sources:
+  Net-Libdnet-0.96.tar.gz: d2d6f1798ad131fdffb863d4854156384eadfdfe
 sources:
-  "Net-Libdnet-0.96.tar.gz": d2d6f1798ad131fdffb863d4854156384eadfdfe
+  Net-Libdnet-0.98.tar.gz: 6a2cc2ebf4d90e07f3ad7bdef98ff1650efafc58
