@@ -7,7 +7,7 @@ Release:	3
 Summary:    Perl interface to libdnet
 License:    BSD
 Group:		Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Net/Net-Libdnet-0.98.tar.gz
 BuildRequires:  libdnet-devel
 BuildRequires:  perl(Class::Gomor::Array)
